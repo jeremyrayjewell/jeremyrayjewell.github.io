@@ -1,0 +1,60 @@
+    .titlebox {
+      background: lightgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .footer {
+      font-size: 12px;
+      background: lightgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      margin: 0;}
+     a {color: black;
+       text-decoration: none;} /* Remove the underline */
+      
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+<style>
+  .publications {
+    font-family: "Times New Roman", serif; /* Change font to Times New Roman */
+    text-align: center; /* Center align all text */
+    line-height: 1.1; /* Even smaller space between lines of text */
+    padding-left: 20px; /* Indentation from the left side of the page */
+    margin: 0; /* Remove default margin for the .publications element */
+    list-style: none; /* Remove bullet points from list items (if applicable) */
+  }
+
+  .publications p {
+    padding-left: 100px; /* Add additional indentation for list items (if applicable) */
+  }
+
+  .publications a {
+    color: black; /* Hyperlinks not blue */
+    text-decoration: none; /* Hyperlinks not underlined */
+    transition: color 0.2s; /* Slightly change color from black when mouseover */
+  }
+
+  .publications a:hover {
+    color: #333; /* Slightly change color from black when mouseover */
+  }
+</style>
