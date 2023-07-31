@@ -7,6 +7,7 @@
   border: 5px outset;
   border-radius: 20px;
   margin: 0 auto;
+  font-family: Georgia;
   
 }
 
@@ -19,7 +20,8 @@
       margin: 0;
       border: 30px solid white;
     border-radius: 150px;
-  max-height: 200px
+  max-height: 215px;
+    font-family: Georgia;
     }
     
 }
@@ -30,6 +32,7 @@ hr {
            box-shadow: 0px 0px 4px 2px rgba(204,204,204,1);}
     .footer {
       font-size: 12px;
+      font-family: Georgia;
       background: lightgreen;
       display: flex;
       justify-content: center;
@@ -59,27 +62,24 @@ border-radius: 15px;
       max-height: 100%;
     }
 
-<style>
   .publications {
-    font-family: "Times New Roman", serif; /* Change font to Times New Roman */
-    text-align: center; /* Center align all text */
-    line-height: 1.1; /* Even smaller space between lines of text */
-    padding-left: 20px; /* Indentation from the left side of the page */
-    margin: 0; /* Remove default margin for the .publications element */
-    list-style: none; /* Remove bullet points from list items (if applicable) */
+    font-family: Georgia, serif;  
+    line-height: 1.1;
+    padding-left: 20px;
+    margin: 0;
+    list-style: none;
   }
 
   .publications p {
-    padding-left: 100px; /* Add additional indentation for list items (if applicable) */
+    padding-left: 100px; 
   }
 
   .publications a {
-    color: black; /* Hyperlinks not blue */
-    text-decoration: none; /* Hyperlinks not underlined */
-    transition: color 0.2s; /* Slightly change color from black when mouseover */
+    color: black;
+    text-decoration: none; 
+    transition: color 0.2s;
   }
 
   .publications a:hover {
-    color: #333; /* Slightly change color from black when mouseover */
+    color: #333; 
   }
-</style>
