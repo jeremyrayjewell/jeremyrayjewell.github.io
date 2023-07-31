@@ -5,10 +5,10 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      border: 30px solid white;
+    border-radius: 150px;
     }
-.info {
-    border: 3px solid white;
-    border-radius: 15;
+    
 }
 hr {
     height: 5px;
