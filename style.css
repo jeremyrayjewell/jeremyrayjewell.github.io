@@ -19,6 +19,7 @@
       margin: 0;
       border: 30px solid white;
     border-radius: 150px;
+  max-height: 200px
     }
     
 }
