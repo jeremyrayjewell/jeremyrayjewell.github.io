@@ -2,10 +2,12 @@
   animation: fadeIn .5s;
 }
 
-#topWords {
-  animation: fadeIn 5s;
+.topWords {
+  color:red;
+    position: relative;
+  left: -10%; 
+  animation: slide-in 1s forwards; 
 }
-
 
 #pub-list {
   background: Azure;
@@ -43,7 +45,6 @@ hr {
       font-size: 12px;
       font-family: Georgia;
       background: lightgreen;
-      display: flex;
       justify-content: center;
       align-items: center;
       height: 20vh;
