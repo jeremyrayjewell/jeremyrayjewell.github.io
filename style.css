@@ -1,4 +1,8 @@
-.imagecontainer #illustration {
+.titlebox {
+  size: 100%
+}
+
+.imagecontainer .illustration {
   opacity: 0;
   animation: fade 1.45s forwards;
 }
@@ -31,7 +35,7 @@
   }
 }
 
-#pub-list {
+.pub-list {
   background: Azure;
     opacity: 0.8;
     height: 300px;
@@ -58,20 +62,20 @@
   font-family: Georgia;
   top: -100px; /* Start above the viewport */
   left: 50%;
-  transform: translateX(-50%) scale(0.5); /* Start with smaller size */
-  animation: fall-zoom 1.5s ease-in-out forwards;
+  transform: translateX(-%50) scale(0.1); /* Start with smaller size */
+  animation: fall-zoom 1s ease-in-out forwards;
   z-index: 999;
 }
 
 /* Default animation for larger screens */
 @keyframes fall-zoom {
   0% {
-    top: -100px;
+    top: -10px;
     transform: translateX(-50%) scale(0.5);
   }
   50% {
     top: calc(50% - 50px);
-    transform: translateX(-50%) scale(1.2);
+    transform: translateX(-50%) scale(1);
   }
   100% {
     top: calc(50% - 50px);
