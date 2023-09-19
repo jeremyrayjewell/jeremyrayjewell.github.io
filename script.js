@@ -1,3 +1,16 @@
+// Create a silent AudioContext
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+// Request user permission to play audio
+document.addEventListener('DOMContentLoaded', function () {
+  audioContext.resume().then(function () {
+    // User granted permission, you can now initiate audio playback
+    startSpinningAndPlayAudio();
+  }).catch(function (error) {
+    console.error('Permission denied for audio:', error);
+  });
+});
+
 // Get references to the image and audio elements
 const spinningImage = document.getElementById('spinningImage');
 const audioStream = document.getElementById('audioStream');
