@@ -1,96 +1,130 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --dark-bg: rgba(15, 15, 15, 0.356);
+  --spacing: 350px;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.9em;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 110px 160px;
+  padding: 120px 0px;
+  
+}
+
+h1, h2, h3, blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); 
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+section {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 800px;
+  background-color: var(--dark-bg);
+  border-radius: 10px;
+
+}
+
+.projects, .schools, .technologies {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectDescriptionsContainer, .sectionChild, .schoolDescriptionsContainer {
+  flex: 4;
+  padding: 10px;
+  background-color: var(--dark-bg);
+}
+
+.techDescriptionsContainer {
+  flex: 2;
+  padding: 10px;
+  background-color: var(--dark-bg);
+}
+
+.projectLogosContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  padding: 20px;
+  background-color: var(--dark-bg);
+}
+
+.schoolLogosContainer, .techLogosContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+  background-color: var(--dark-bg);
+}
+
+.schoolLogoRow, .techLogoRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px
+}
+
+.projectLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95px;
+  height: auto;
+}
+
+.schoolLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75px;
+  height: auto;
+}
+
+.techLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: auto;
+}
+
+ul {
+  font-size: small;
+  list-style: none;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  color: inherit; 
+  text-decoration: none; 
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
