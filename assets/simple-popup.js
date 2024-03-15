@@ -1,4 +1,4 @@
-const SimplePopup = (function() {
+var SimplePopup = (function() {
     let wrapper, instance, closeButton, content, _params, t, isAnimating = false,
         animationType;
     const defineProperty = (obj, prop) => {
