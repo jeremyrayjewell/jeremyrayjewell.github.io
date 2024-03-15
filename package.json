@@ -1,7 +1,15 @@
 {
-    "name": "three-demo",
-    "version": "0.0.0",
-    "dependencies": {
-        "three": "^0.128.0"
-    }
+  "name": "jeremyrayjewell.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
