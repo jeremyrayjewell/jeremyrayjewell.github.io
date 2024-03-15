@@ -8,13 +8,12 @@ canvas {
 
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.356);
+  --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
 
   font-family: brandon-grotesque, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-size: 0.9em;
 }
 
 
@@ -24,17 +23,17 @@ main {
   z-index: 99;
   position: absolute;
   width: 100%;
-  margin: 110px 160px;
+  margin: 0px auto;
   padding: 120px 0px;
   
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 h1, h2, h3, blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
-  text-align: center;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); 
 }
 
 canvas {
@@ -43,88 +42,40 @@ canvas {
   left: 0;
 }
 
-section {
-  margin: 0 auto;
-  padding: 10px;
-  max-width: 800px;
-  background-color: var(--dark-bg);
-  border-radius: 10px;
 
-}
 
-.projects, .schools, .technologies {
-  display: flex;
-  justify-content: space-between;
-}
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
 
-.projectDescriptionsContainer, .sectionChild, .schoolDescriptionsContainer {
-  flex: 4;
-  padding: 10px;
-  background-color: var(--dark-bg);
-}
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
 
-.techDescriptionsContainer {
-  flex: 2;
-  padding: 10px;
-  background-color: var(--dark-bg);
-}
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
 
-.projectLogosContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 2;
-  padding: 20px;
-  background-color: var(--dark-bg);
-}
+  blockquote p {
+    color: black;
+    background-color: white;
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+  }
 
-.schoolLogosContainer, .techLogosContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  padding: 10px;
-  background-color: var(--dark-bg);
-}
-
-.schoolLogoRow, .techLogoRow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3px
-}
-
-.projectLogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95px;
-  height: auto;
-}
-
-.schoolLogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75px;
-  height: auto;
-}
-
-.techLogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50px;
-  height: auto;
-}
-
-ul {
-  font-size: small;
-  list-style: none;
-}
-
-a {
-  color: inherit; 
-  text-decoration: none; 
-}
-
+  .left {
+    grid-column: 6 / 12;
+  }
