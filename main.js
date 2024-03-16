@@ -3,28 +3,24 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 //modals
 
 const triggers = document.querySelectorAll('.sp-trigger');
+const modals = document.querySelectorAll('.sp-source');
+const closeButtons = document.querySelectorAll('.sp-source-close'); // Select all close buttons initially
 
 triggers.forEach(trigger => {
   trigger.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default anchor tag behavior
 
-    const targetId = trigger.dataset.target; // Get the target ID from the trigger
-    const modal = document.getElementById(targetId); // Select the corresponding modal
+    const targetId = trigger.dataset.target;
+    const modal = document.getElementById(targetId);
 
-    modal.style.display = 'block'; // Show the correct modal
+    modal.style.display = 'block';
+  });
+});
 
-    // Add a close button to the modal content
-    const closeButton = document.createElement('button');
-    closeButton.classList.add('sp-source-close');
-    closeButton.textContent = '❌'; // Close icon using entity character
-
-    modal.appendChild(closeButton); // Add the close button to the modal
-
-    closeButton.addEventListener('click', () => {
-      modal.style.display = 'none';
-      // Optionally remove the close button (if desired)
-      // closeButton.remove();
-    });
+closeButtons.forEach(closeButton => { // Attach event listeners to existing close buttons
+  closeButton.addEventListener('click', () => {
+    const modal = closeButton.parentElement; // Get the modal container from the button's parent
+    modal.style.display = 'none';
   });
 });
 
