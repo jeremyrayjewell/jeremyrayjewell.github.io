@@ -3,22 +3,25 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 //modals
 
 const triggers = document.querySelectorAll('.sp-trigger');
-const modal = document.getElementById('resume'); // Select the existing modal
 
 triggers.forEach(trigger => {
   trigger.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default anchor tag behavior
 
-    modal.style.display = 'block'; // Show the existing modal
+    const targetId = trigger.dataset.target; // Get the target ID from the trigger
+    const modal = document.getElementById(targetId); // Select the corresponding modal
+
+    modal.style.display = 'block'; // Show the correct modal
   });
 });
 
 // Optional: Close the modal by clicking outside of it (if desired)
 window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
+  if (event.target.classList.contains('sp-source')) {
+    event.target.style.display = 'none';
   }
 });
+
 
 // Setup
 
