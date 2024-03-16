@@ -1,13 +1,11 @@
 const SimplePopup = (function() {
     let wrapper, instance, closeButton, content, _params, t, isAnimating = false,
-      animationType;
-  
+        animationType;
     const defineProperty = (obj, prop) => {
-      obj = obj || {};
-      obj[prop] = obj[prop] || '';
-      return obj;
+        obj = obj || {}
+        obj[prop] = obj[prop] || '';
+        return obj;
     };
-  
     const centerize = () => {
         // center the content's height is greater window's height
         if (content.scrollHeight >= window.innerHeight) {
@@ -17,93 +15,89 @@ const SimplePopup = (function() {
         }
     };
 
-
-
     function SimplePopup() {}
-  SimplePopup.prototype.openModal = (params, cb) => {
-    // set params
-    _params = params;
+    SimplePopup.prototype.openModal = (params, cb) => {
 
-    // set flag when animation in progress
-    isAnimating = true;
+        // set params
+        _params = params;
 
-    // set animation type
-    _params.styles = defineProperty(_params.styles, 'position');
+        // set flag when animation in progress
+        isAnimating = true;
 
-    if (_params.styles.animation) {
-      animationType = _params.styles.position === 'center' ? 'zoomIn' : 'fadeInDown';
-    }
+        // set animation type
+        _params.styles = defineProperty(_params.styles, 'position');
 
-    wrapper = document.createElement('div');
-    const wrapperClass = `sp-wrapper ${_params.styles.animation && 'fadeIn'} ${_params.styles.position === 'center' ? 'center-all' : ''}`;
-    wrapper.setAttribute('class', wrapperClass);
-
-    // populate the content
-    content = document.createElement('div');
-    content.setAttribute('class', `content ${animationType}`);
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = params.content;
-    content.appendChild(tempDiv);
-
-    //apply inline style
-    const maxWidth = params.styles.maxWidth ? `max-width: ${params.styles.maxWidth}` : '';
-    const duration = params.styles.duration ? `; animation-duration:${params.styles.duration/1000}s` : '';
-    content.setAttribute('style', `${maxWidth}${_params.styles.animation && duration}`);
-
-
-    // add close button
-    if (_params.styles.closeButton) {
-      closeButton = document.createElement('div');
-      closeButton.setAttribute('class', 'sp-close-button');
-      content.prepend(closeButton);
-    }
-
-    // add content to wrapper
-    wrapper.appendChild(content);
-
-    // add to body
-    document.body.prepend(wrapper);
-
-    t && clearTimeout(t);
-
-    t = setTimeout(() => {
-      isAnimating = false;
-    }, params.styles.duration);
-
-    cb && cb();
-  };
-
-  SimplePopup.prototype.closeModal = (e) => {
-    if (isAnimating) return;
-    const classes = e.srcElement.getAttribute('class');
-    if (classes && (classes.indexOf('sp-wrapper') > -1 || classes.indexOf('sp-close-button') > -1)) {
-      if (_params.styles.animation) {
-        wrapper.classList.remove('fadeIn');
-        wrapper.classList.add('fadeOut');
-
-        if (_params.styles.position !== 'center') {
-          content.classList.remove('fadeInDown');
-          content.classList.add('fadeOutUp');
-        } else {
-          content.classList.remove('zoomIn');
-          content.classList.add('zoomOut');
+        if (_params.styles.animation) {
+            animationType = _params.styles.position === 'center' ? 'zoomIn' : 'fadeInDown';
         }
 
-        setTimeout(() => {
-          wrapper && wrapper.parentNode.removeChild(wrapper);
-        }, _params.styles.duration || 350)
-      } else {
-        wrapper.parentNode.removeChild(wrapper);
-      }
-    }
-  };
+        wrapper = document.createElement('div');
+        wrapper.setAttribute('class', `sp-wrapper ${_params.styles.animation && 'fadeIn'}  ${_params.styles.position === 'center' ? 'center-all' : ''}`);
 
-  SimplePopup.prototype.init = (params) => {
-    instance = instance || new SimplePopup();
-    const triggers = document.querySelectorAll('.sp-trigger');
-    triggers.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault(); // prevent the default click event behavior
+        // populate the content
+        content = document.createElement('div');
+        content.setAttribute('class', `content ${animationType}`);
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = params.content;
+        content.appendChild(tempDiv);
+
+        //apply inline style
+        const maxWidth = params.styles.maxWidth ? `max-width: ${params.styles.maxWidth}` : '';
+        const duration = params.styles.duration ? `; animation-duration:${params.styles.duration/1000}s` : '';
+        content.setAttribute('style', `${maxWidth}${_params.styles.animation && duration}`);
+
+
+        // add close button
+        if (_params.styles.closeButton) {
+            const closeButton = document.createElement('div');
+            closeButton.setAttribute('class', 'sp-close-button');
+            content.prepend(closeButton);
+        }
+
+        // add content to wrapper
+        wrapper.appendChild(content);
+
+        // add to body
+        document.body.prepend(wrapper);
+
+        t && clearTimeout(t);
+
+        t = setTimeout(() => {
+            isAnimating = false;
+        }, params.styles.duration);
+
+        cb && cb();
+    };
+    SimplePopup.prototype.closeModal = (e) => {
+        if (isAnimating) return;
+        const classes = e.srcElement.getAttribute('class');
+        if (classes && (classes.indexOf('sp-wrapper') > -1 || classes.indexOf('sp-close-button') > -1)) {
+            if (_params.styles.animation) {
+                wrapper.classList.remove('fadeIn');
+                wrapper.classList.add('fadeOut');
+
+                if (_params.styles.position !== 'center') {
+                    content.classList.remove('fadeInDown');
+                    content.classList.add('fadeOutUp');
+                } else {
+                    content.classList.remove('zoomIn');
+                    content.classList.add('zoomOut');
+                }
+
+                setTimeout(() => {
+                    wrapper && wrapper.parentNode.removeChild(wrapper);
+                }, _params.styles.duration || 350)
+            } else {
+                wrapper.parentNode.removeChild(wrapper);
+            }
+
+        }
+    };
+    SimplePopup.prototype.init = (params) => {
+        let triggers = document.querySelectorAll('.sp-trigger');
+        triggers.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault(); // prevent the default click event behavior
                 const target = e.target;
                 const id = target.getAttribute('data-target');
                 const source = document.querySelector(`#${id}`);
@@ -116,7 +110,6 @@ const SimplePopup = (function() {
                     wrapper && wrapper.removeEventListener('click', instance.closeModal);
                     wrapper && wrapper.addEventListener('click', instance.closeModal);
                     //load close button
-                    closeButton = document.querySelector('.sp-close-button');
                     closeButton && closeButton.removeEventListener('click', instance.closeModal);
                     closeButton && closeButton.addEventListener('add', instance.closeModal);
 
@@ -125,18 +118,10 @@ const SimplePopup = (function() {
                 });
             });
         });
-        wrapper && wrapper.addEventListener('click', instance.closeModal);
-    closeButton && closeButton.addEventListener('click', instance.closeModal);
-
-    window.addEventListener('resize', () => centerize);
+        window.addEventListener('resize', () => centerize);
     };
-    SimplePopup.init({
-        maxWidth: '400px',
-        closeButton: true
-      });
-    
-      if (!instance) {
+    if (!instance) {
         instance = new SimplePopup();
-      }
-      return instance;
-    })();
+    }
+    return instance;
+})();
