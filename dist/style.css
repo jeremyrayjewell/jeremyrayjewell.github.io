@@ -148,3 +148,18 @@ a {
   border: 1px solid #888;
   width: 80%; /* Adjust width as needed */
 }
+
+.sp-source-close { /* Style the close button */
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer; /* Indicate clickable behavior */
+}
+
+.sp-source-close:hover,
+.sp-source-close:focus {
+  color: black;
+  text-decoration: none;
+}

@@ -12,6 +12,19 @@ triggers.forEach(trigger => {
     const modal = document.getElementById(targetId); // Select the corresponding modal
 
     modal.style.display = 'block'; // Show the correct modal
+
+    // Add a close button to the modal content
+    const closeButton = document.createElement('button');
+    closeButton.classList.add('sp-source-close');
+    closeButton.textContent = '&times;'; // Close icon using entity character
+
+    modal.appendChild(closeButton); // Add the close button to the modal
+
+    closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+      // Optionally remove the close button (if desired)
+      // closeButton.remove();
+    });
   });
 });
 
