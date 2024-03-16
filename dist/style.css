@@ -136,7 +136,7 @@ a {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 50%; /* Adjust width to cover the entire viewport */
+  width: 50vw; /* Adjust width to cover the entire viewport */
   height: auto;
   overflow: visible;
   background-color: rgba(0, 0, 0, 0.4);
