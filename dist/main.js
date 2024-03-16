@@ -12,11 +12,7 @@ const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
 
-// Initialize SimplePopup
-SimplePopup.init({
-  maxWidth: '400px',
-  closeButton: true
-});
+
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
