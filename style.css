@@ -136,9 +136,9 @@ a {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Adjust width to cover the entire viewport */
-  height: 100%; /* Adjust height to cover the entire viewport */
-  overflow: auto;
+  width: 50%; /* Adjust width to cover the entire viewport */
+  height: auto;
+  overflow: visible;
   background-color: rgba(0, 0, 0, 0.4);
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -150,12 +150,14 @@ a {
   padding: 20px;
   border: 1px solid #888;
   width: 50%; /* Adjust width as needed */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .sp-source-close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
