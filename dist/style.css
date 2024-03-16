@@ -128,34 +128,37 @@ a {
   text-decoration: none; 
 }
 
+/* modals */
 
-.sp-source { /* Target the existing modal container */
-  display: none; /* Initially hidden */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+.sp-source {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 50%; 
-  height: auto;
-  overflow: auto; /* Enable scrolling if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Transparent black background */
+  width: 100%; /* Adjust width to cover the entire viewport */
+  height: 100%; /* Adjust height to cover the entire viewport */
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
-.sp-source-content { /* Style the content within the modal */
+.sp-source-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from top and centered */
+  margin: 0 auto; /* Center horizontally */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Adjust width as needed */
+  width: 50%; /* Adjust width as needed */
 }
 
-.sp-source-close { /* Style the close button */
+.sp-source-close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
   transition: 0.3s;
-  cursor: pointer; /* Indicate clickable behavior */
+  cursor: pointer;
 }
 
 .sp-source-close:hover,
