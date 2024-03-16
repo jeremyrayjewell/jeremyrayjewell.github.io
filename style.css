@@ -136,8 +136,9 @@ a {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 50vw; /* Adjust width to cover the entire viewport */
+  width: 100vw; /* Adjust width to cover the entire viewport */
   height: auto;
+  max-height: 95vh;
   overflow: visible;
   background-color: rgba(0, 0, 0, 0.4);
   justify-content: center; /* Center horizontally */
