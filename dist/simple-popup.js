@@ -15,6 +15,8 @@ const SimplePopup = (function() {
         }
     };
 
+
+
     function SimplePopup() {}
     SimplePopup.prototype.openModal = (params, cb) => {
 
@@ -110,6 +112,7 @@ const SimplePopup = (function() {
                     wrapper && wrapper.removeEventListener('click', instance.closeModal);
                     wrapper && wrapper.addEventListener('click', instance.closeModal);
                     //load close button
+                    closeButton = document.querySelector('.sp-close-button');
                     closeButton && closeButton.removeEventListener('click', instance.closeModal);
                     closeButton && closeButton.addEventListener('add', instance.closeModal);
 
