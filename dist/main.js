@@ -16,7 +16,7 @@ triggers.forEach(trigger => {
     // Add a close button to the modal content
     const closeButton = document.createElement('button');
     closeButton.classList.add('sp-source-close');
-    closeButton.textContent = '&times;'; // Close icon using entity character
+    closeButton.textContent = '❌'; // Close icon using entity character
 
     modal.appendChild(closeButton); // Add the close button to the modal
 
