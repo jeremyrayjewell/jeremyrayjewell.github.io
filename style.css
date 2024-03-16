@@ -134,31 +134,30 @@ a {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 50%; /* Center horizontally with transform */
-  top: 50%; /* Center vertically with transform */
-  transform: translate(-50%, -50%); /* Translate for centering */
-  width: 98vw; /* Adjust width as needed */
-  height: 98vh; /* Adjust height as needed */
+  left: 0;
+  top: 0;
+  width: 98vw; 
+  height: 98vh;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-  /* No need for justify-content and align-items here */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .sp-source-content {
   background-color: #fefefe;
-  margin: auto; /* Center both horizontally and vertically */
+  margin: 0 auto; /* Center horizontally */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Adjust width as needed */
-  /* No need for justify-content and align-items here */
+  width: 50%; /* Adjust width as needed */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .sp-source-close {
-  position: absolute; /* Position close button absolutely */
-  top: 10px; /* Adjust top position */
-  right: 10px; /* Adjust right position */
   color: #aaaaaa;
-  font-size: 20px; /* Adjust font size */
+  float: right;
+  font-size: 18px;
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
