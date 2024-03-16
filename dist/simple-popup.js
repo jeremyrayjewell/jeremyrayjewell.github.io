@@ -123,8 +123,13 @@ const SimplePopup = (function() {
         });
         window.addEventListener('resize', () => centerize);
     };
-    if (!instance) {
+    SimplePopup.init({
+        maxWidth: '400px',
+        closeButton: true
+      });
+    
+      if (!instance) {
         instance = new SimplePopup();
-    }
-    return instance;
-})();
+      }
+      return instance;
+    })();
