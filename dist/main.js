@@ -53,6 +53,17 @@ camera.position.setX(0);
 
 renderer.render(scene, camera);
 
+//Resizing
+
+window.addEventListener( 'resize', function( ) 
+  {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize( width, height );
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix( );
+  } );
+
 //portal 1
 let map = new THREE.TextureLoader().load('./assets/portal1.png');
 map.magFilter = THREE.NearestFilter;
