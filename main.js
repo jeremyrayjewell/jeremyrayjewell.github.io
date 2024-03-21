@@ -83,7 +83,7 @@ scene.add(sprite1);
 
 //layer 1
 
-let layer1Map = new THREE.TextureLoader().load('./assets/layer01.png');
+let layer1Map = new THREE.TextureLoader().load('./assets/layer01.webp');
 layer1Map.magFilter = THREE.NearestFilter;
 let layer1Material = new THREE.SpriteMaterial({ map: layer1Map });
 const layer1Sprite = new THREE.Sprite(layer1Material);
@@ -93,7 +93,7 @@ scene.add(layer1Sprite);
 
 //layer 2
 
-let layer2Map = new THREE.TextureLoader().load('./assets/layer02.png');
+let layer2Map = new THREE.TextureLoader().load('./assets/layer02.webp');
 layer2Map.magFilter = THREE.NearestFilter;
 let layer2Material = new THREE.SpriteMaterial({ map: layer2Map });
 const layer2Sprite = new THREE.Sprite(layer2Material);
@@ -103,7 +103,7 @@ scene.add(layer2Sprite);
 
 //layer 3 
 
-let layer3Map = new THREE.TextureLoader().load('./assets/layer03.png');
+let layer3Map = new THREE.TextureLoader().load('./assets/layer03.webp');
 layer3Map.magFilter = THREE.NearestFilter;
 let layer3Material = new THREE.SpriteMaterial({ map: layer3Map });
 const layer3Sprite = new THREE.Sprite(layer3Material);
@@ -113,7 +113,7 @@ scene.add(layer3Sprite);
 
 // layer 4
 
-let layer4Map = new THREE.TextureLoader().load('./assets/layer04.png');
+let layer4Map = new THREE.TextureLoader().load('./assets/layer04.webp');
 layer4Map.magFilter = THREE.NearestFilter;
 let layer4Material = new THREE.SpriteMaterial({ map: layer4Map });
 const layer4Sprite = new THREE.Sprite(layer4Material);
@@ -123,7 +123,7 @@ scene.add(layer4Sprite);
 
 // layer 5
 
-let layer5Map = new THREE.TextureLoader().load('./assets/layer05.png');
+let layer5Map = new THREE.TextureLoader().load('./assets/layer05.webp');
 layer5Map.magFilter = THREE.NearestFilter;
 let layer5Material = new THREE.SpriteMaterial({ map: layer5Map });
 const layer5Sprite = new THREE.Sprite(layer5Material);
@@ -141,49 +141,11 @@ sprite2.scale.set(23, 15, 1);
 sprite2.position.set(0, 0, -75.5);
 scene.add(sprite2);
 
-// //layer 6
 
-// let layer6Map = new THREE.TextureLoader().load('./assets/layer06.png');
-// layer6Map.magFilter = THREE.NearestFilter;
-// let layer6Material = new THREE.SpriteMaterial({ map: layer6Map });
-// const layer6Sprite = new THREE.Sprite(layer6Material);
-// layer6Sprite.scale.set(245, 140, 1);
-// layer6Sprite.position.set(1, 0, -105.5);
-// scene.add(layer6Sprite);
-
-// //layer 7
-
-// let layer7Map = new THREE.TextureLoader().load('./assets/layer07.png');
-// layer7Map.magFilter = THREE.NearestFilter;
-// let layer7Material = new THREE.SpriteMaterial({ map: layer7Map });
-// const layer7Sprite = new THREE.Sprite(layer7Material);
-// layer7Sprite.scale.set(245, 140, 1);
-// layer7Sprite.position.set(1, 0, -135.5);
-// scene.add(layer7Sprite);
-
-// //layer 8
-
-// let layer8Map = new THREE.TextureLoader().load('./assets/layer08.png');
-// layer8Map.magFilter = THREE.NearestFilter;
-// let layer8Material = new THREE.SpriteMaterial({ map: layer8Map });
-// const layer8Sprite = new THREE.Sprite(layer8Material);
-// layer8Sprite.scale.set(245, 140, 1);
-// layer8Sprite.position.set(1, 0, -165.5);
-// scene.add(layer8Sprite);
-
-// //layer 9
-
-// let layer9Map = new THREE.TextureLoader().load('./assets/layer09.png');
-// layer9Map.magFilter = THREE.NearestFilter;
-// let layer9Material = new THREE.SpriteMaterial({ map: layer9Map });
-// const layer9Sprite = new THREE.Sprite(layer9Material);
-// layer9Sprite.scale.set(245, 140, 1);
-// layer9Sprite.position.set(1, 0, -195.5);
-// scene.add(layer9Sprite);
 
 //layer 10
 
-let layer10Map = new THREE.TextureLoader().load('./assets/layer10.png');
+let layer10Map = new THREE.TextureLoader().load('./assets/layer10.webp');
 layer10Map.magFilter = THREE.NearestFilter;
 let layer10Material = new THREE.SpriteMaterial({ map: layer10Map, color: 0xf5d393});
 const layer10Sprite = new THREE.Sprite(layer10Material);
@@ -191,20 +153,11 @@ layer10Sprite.scale.set(249, 140, 1);
 layer10Sprite.position.set(1, 0, -145.6);
 scene.add(layer10Sprite);
 
-// //layer 11
-
-// let layer11Map = new THREE.TextureLoader().load('./assets/layer11.png');
-// layer11Map.magFilter = THREE.NearestFilter;
-// let layer11Material = new THREE.SpriteMaterial({ map: layer11Map });
-// const layer11Sprite = new THREE.Sprite(layer11Material);
-// layer11Sprite.scale.set(245, 140, 1);
-// layer11Sprite.position.set(1, 0, -175.5);
-// scene.add(layer11Sprite);
 
 
 //layer 12
 
-let layer12Map = new THREE.TextureLoader().load('./assets/layer12.png');
+let layer12Map = new THREE.TextureLoader().load('./assets/layer12.webp');
 layer12Map.magFilter = THREE.NearestFilter;
 let layer12Material = new THREE.SpriteMaterial({ map: layer12Map, color: 0x505050});
 const layer12Sprite = new THREE.Sprite(layer12Material);
@@ -214,7 +167,7 @@ scene.add(layer12Sprite);
 
 //layer 13
 
-let layer13Map = new THREE.TextureLoader().load('./assets/layer13.png');
+let layer13Map = new THREE.TextureLoader().load('./assets/layer13.webp');
 layer13Map.magFilter = THREE.NearestFilter;
 let layer13Material = new THREE.SpriteMaterial({ map: layer13Map, color: 0x505050});
 const layer13Sprite = new THREE.Sprite(layer13Material);
@@ -224,7 +177,7 @@ scene.add(layer13Sprite);
 
 //layer 14
 
-let layer14Map = new THREE.TextureLoader().load('./assets/layer14.png');
+let layer14Map = new THREE.TextureLoader().load('./assets/layer14.webp');
 layer14Map.magFilter = THREE.NearestFilter;
 let layer14Material = new THREE.SpriteMaterial({ map: layer14Map });
 const layer14Sprite = new THREE.Sprite(layer14Material);
@@ -249,7 +202,7 @@ animateLayer14();
 
 //layer 15
 
-let layer15Map = new THREE.TextureLoader().load('./assets/layer15.png');
+let layer15Map = new THREE.TextureLoader().load('./assets/layer15.webp');
 layer15Map.magFilter = THREE.NearestFilter;
 let layer15Material = new THREE.SpriteMaterial({ map: layer15Map, color: 0x004400 });
 const layer15Sprite = new THREE.Sprite(layer15Material);
@@ -259,7 +212,7 @@ scene.add(layer15Sprite);
 
 //layer 16
 
-let layer16Map = new THREE.TextureLoader().load('./assets/layer16.png');
+let layer16Map = new THREE.TextureLoader().load('./assets/layer16.webp');
 layer16Map.magFilter = THREE.NearestFilter;
 let layer16Material = new THREE.SpriteMaterial({ map: layer16Map, color: 0x003300});
 const layer16Sprite = new THREE.Sprite(layer16Material);
@@ -269,7 +222,7 @@ scene.add(layer16Sprite);
 
 //layer 17
 
-let layer17Map = new THREE.TextureLoader().load('./assets/layer17.png');
+let layer17Map = new THREE.TextureLoader().load('./assets/layer17.webp');
 layer17Map.magFilter = THREE.NearestFilter;
 let layer17Material = new THREE.SpriteMaterial({ map: layer17Map, color: 0x002200 });
 const layer17Sprite = new THREE.Sprite(layer17Material);
@@ -297,7 +250,7 @@ animateLayer17();
 
 //layer 18
 
-let layer18Map = new THREE.TextureLoader().load('./assets/layer18.png');
+let layer18Map = new THREE.TextureLoader().load('./assets/layer18.webp');
 layer18Map.magFilter = THREE.NearestFilter;
 let layer18Material = new THREE.SpriteMaterial({ map: layer18Map, color: 0x006600 });
 const layer18Sprite = new THREE.Sprite(layer18Material);
@@ -307,7 +260,7 @@ scene.add(layer18Sprite);
 
 //layer 19
 
-let layer19Map = new THREE.TextureLoader().load('./assets/layer19.png');
+let layer19Map = new THREE.TextureLoader().load('./assets/layer19.webp');
 layer19Map.magFilter = THREE.NearestFilter;
 let layer19Material = new THREE.SpriteMaterial({ map: layer19Map, color: 0x004400});
 const layer19Sprite = new THREE.Sprite(layer19Material);
@@ -329,7 +282,7 @@ scene.add(sprite3);
 
 //layer 20
 
-let layer20Map = new THREE.TextureLoader().load('./assets/layer20.png');
+let layer20Map = new THREE.TextureLoader().load('./assets/layer20.webp');
 layer20Map.magFilter = THREE.NearestFilter;
 let layer20Material = new THREE.SpriteMaterial({ map: layer20Map, color: 0x708090 });
 const layer20Sprite = new THREE.Sprite(layer20Material);
@@ -339,7 +292,7 @@ scene.add(layer20Sprite);
 
 //layer 21
 
-let layer21Map = new THREE.TextureLoader().load('./assets/layer21.png');
+let layer21Map = new THREE.TextureLoader().load('./assets/layer21.webp');
 layer21Map.magFilter = THREE.NearestFilter;
 let layer21Material = new THREE.SpriteMaterial({ map: layer21Map, color: 0x708090 });
 const layer21Sprite = new THREE.Sprite(layer21Material);
@@ -356,7 +309,7 @@ let time = 0;
 
 //layer 22
 
-let layer22Map = new THREE.TextureLoader().load('./assets/layer22.png');
+let layer22Map = new THREE.TextureLoader().load('./assets/layer22.webp');
 layer22Map.magFilter = THREE.NearestFilter;
 let layer22Material = new THREE.SpriteMaterial({ map: layer22Map, color: 0x708090 });
 const layer22Sprite = new THREE.Sprite(layer22Material);
@@ -366,7 +319,7 @@ scene.add(layer22Sprite);
 
 //layer 23
 
-let layer23Map = new THREE.TextureLoader().load('./assets/layer23.png');
+let layer23Map = new THREE.TextureLoader().load('./assets/layer23.webp');
 layer23Map.magFilter = THREE.NearestFilter;
 let layer23Material = new THREE.SpriteMaterial({ map: layer23Map, color: 0x708090 });
 const layer23Sprite = new THREE.Sprite(layer23Material);
@@ -402,7 +355,7 @@ scene.add(sprite4);
 
 //layer 30
 
-let layer30Map = new THREE.TextureLoader().load('./assets/layer30.png');
+let layer30Map = new THREE.TextureLoader().load('./assets/layer30.webp');
 layer30Map.magFilter = THREE.NearestFilter;
 let layer30Material = new THREE.SpriteMaterial({ map: layer30Map, color: 0xd3d3d3 });
 const layer30Sprite = new THREE.Sprite(layer30Material);
@@ -421,7 +374,7 @@ sprite5.position.set(0, 0, -285.5);
 scene.add(sprite5);
 
 // Layer 31
-let layer31Map = new THREE.TextureLoader().load('./assets/layer31.png');
+let layer31Map = new THREE.TextureLoader().load('./assets/layer31.webp');
 layer31Map.magFilter = THREE.NearestFilter;
 let layer31Material = new THREE.MeshBasicMaterial({ map: layer31Map, color: 0xd3d3d3, transparent: true });
 let layer31geometry = new THREE.BoxGeometry(95, 78, 1);
@@ -437,7 +390,7 @@ const animateLayer31 = () => {
 animateLayer31();
 
 // Layer 32
-let layer32Map = new THREE.TextureLoader().load('./assets/layer32.png');
+let layer32Map = new THREE.TextureLoader().load('./assets/layer32.webp');
 layer32Map.magFilter = THREE.NearestFilter;
 let layer32Material = new THREE.MeshBasicMaterial({ map: layer32Map, color: 0xd3d3d3, transparent: true });
 let layer32geometry = new THREE.BoxGeometry(100, 80, 1);
@@ -455,7 +408,7 @@ animateLayer32();
 //layer 33
 
 // Layer 33
-let layer33Map = new THREE.TextureLoader().load('./assets/layer33.png');
+let layer33Map = new THREE.TextureLoader().load('./assets/layer33.webp');
 layer33Map.magFilter = THREE.NearestFilter;
 let layer33Material = new THREE.MeshBasicMaterial({ map: layer33Map, color: 0xd3d3d3, transparent: true });
 let layer33geometry = new THREE.BoxGeometry(95, 78, 1);
@@ -473,7 +426,7 @@ animateLayer33();
 
 //layer 34
 
-let layer34Map = new THREE.TextureLoader().load('./assets/layer34.png');
+let layer34Map = new THREE.TextureLoader().load('./assets/layer34.webp');
 layer34Map.magFilter = THREE.NearestFilter;
 let layer34Material = new THREE.MeshBasicMaterial({ map: layer34Map, color: 0xd3d3d3, transparent: true });
 let layer34geometry = new THREE.BoxGeometry(80, 60, 1);
@@ -494,7 +447,7 @@ animateLayer34();
 
 //layer 40
 
-let layer40Map = new THREE.TextureLoader().load('./assets/layer40.png');
+let layer40Map = new THREE.TextureLoader().load('./assets/layer40.webp');
 layer40Map.magFilter = THREE.NearestFilter;
 let layer40Material = new THREE.SpriteMaterial({ map: layer40Map, color: 0xd3d3d3 });
 const layer40Sprite = new THREE.Sprite(layer40Material);
